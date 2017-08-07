@@ -14,7 +14,7 @@ const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
 const Loki = require("lokijs");
-const utils_1 = require("./utils");
+const utils_1 = require("./src/libraries/utils");
 // setup
 const DB_NAME = "db.json";
 const COLLECTION_NAME = "images";
@@ -22,7 +22,7 @@ const UPLOAD_PATH = "uploads";
 const upload = multer({ dest: `${UPLOAD_PATH}/`, fileFilter: utils_1.imageFilter });
 const db = new Loki(`${UPLOAD_PATH}/${DB_NAME}`, { persistenceMethod: "fs" });
 // optional: clean all data before start
-// cleanFolder(UPLOAD_PATH);
+utils_1.cleanFolder(UPLOAD_PATH);
 // app
 const app = express();
 app.use(cors());
