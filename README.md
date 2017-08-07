@@ -1,2 +1,4 @@
-# FILE UPLOAD
-File Upload With Express, Multer and Developed With Typescript
+# Object Oriented Programming Series
+How to implement SOLID Principles in Typescript.
+
+That's it. Happy coding.
